@@ -1,0 +1,201 @@
+// fonts
+@import "fonts.css"
+
+$dark_bg = #1E202F
+$dark_bg_nav = #141626
+$dark_primary = #3442B3
+$dark_white = #F7F7F7
+$dark_line = #40414E 
+
+.h-100
+  height 100% !important
+
+.q-px-none
+  padding-right 0 !important
+  padding-left 0 !important
+
+// components
+@import "components/_all"
+
+// common styles
+body
+  font-family 'Avenir Next Cyr'
+  font-size 16px
+
+a
+  text-decoration none
+  color $primary
+  
+  &.underline
+    text-decoration underline
+
+input
+  font-size 16px
+  
+  &.text-bold
+    font-size 18px
+
+// customs
+.bbwrap
+  display flex
+  flex-direction column
+  justify-content flex-end
+  align-items center
+  padding 25px 0
+  
+  &__content
+    flex-grow 1
+    width 100%
+    padding 0 25px
+  
+  &__footer
+    text-align center
+    margin 0 25px
+    // border-top 1px solid $grey
+  
+.bx-input
+  font-size 16px
+  line-height 24px
+  padding-top 24px
+
+.toolbar-subtitle
+  margin 0
+  font-size 12px
+
+.q-item--active
+  color #000
+  background #eef2fd
+
+.create-team-user
+
+  .q-badge
+    display none
+  
+  &.q-item--active .q-badge
+    display flex
+
+.badge-round
+  font-size 5px
+  border-radius 50%
+  padding 6px
+
+.badge-bottom.q-badge--floating
+  top inherit
+  bottom -4px
+
+.badge-lg
+  font-size 10px
+  padding 7px
+
+.text-body2
+  font-size 12px
+
+.text-gray
+  color $grey
+
+.bg-header-gradient
+  background linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%) !important
+
+.page-game  
+  .q-expansion-item__container > .q-item
+    border-bottom 1px solid rgba(0,0,0,0.12)
+
+.q-toolbar
+  padding 0 16px
+
+.input--borderless
+  
+  .q-field__control
+    
+    &:before
+      border-bottom none
+
+    &:after
+      display none
+
+.game-info
+  color #9e9e9e
+  
+  .q-item
+    padding-left 48px
+    
+    &:before
+      content ''
+      display block
+      position absolute
+      top 50%
+      left 22px
+      margin-top -3px
+      border-radius 50%
+      width 6px
+      height 6px
+      background #9e9e9e
+  
+  .q-item__section--side
+    color #000
+
+.q-btn
+  
+  .q-icon
+    font-size 1rem
+
+.star-side
+  padding-right 8px !important
+
+// Dark Theme
+
+.dark-theme
+  color $dark_white
+  
+  .bg-primary
+    background $dark_primary !important
+  
+  .q-layout
+    background $dark_bg !important
+  
+  .q-header:not(.bg-header-gradient)
+    background $dark_bg !important
+    color $dark_white !important
+  
+  .q-footer
+    background $dark_bg_nav !important
+    color $dark_white !important
+
+  .q-field
+    
+    &__native, &__marginal
+      color $dark_white
+  
+    &__label
+      color rgba($dark_white, .6)
+    
+    &__control:before
+      border-bottom-color rgba($dark_white, .24) !important
+  
+  .game-info
+    
+    .q-item__section--side
+      color $dark_white !important
+  
+  .q-btn
+    
+    &--outline
+      border none !important
+      background $dark_primary !important
+      color $dark_white !important
+  
+  .q-card
+    background #E3E3E3 !important
+  
+  .q-item
+    
+    &--active
+      background rgba($dark_primary, .08) !important
+      color $dark_white
+  
+  .q-list--separator > .q-item-type
+    border-color rgba(255, 255, 255, 0.15) !important
+  
+  .page-game  
+    .q-expansion-item__container > .q-item
+      border-bottom 1px solid rgba(255,255,255,0.12)
